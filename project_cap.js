@@ -18,10 +18,13 @@ let path = './pages_for_web/';
       path += 'main_page.html';
       res.statusCode = 200;
       break;
-    case '/about-us':
-      res.statusCode = 301;
-      res.setHeader('Location', '/about');
-      res.end();
+    case '/user_page':
+      path += 'user_page.html';
+      res.statusCode = 200;
+      break;
+    case '/word_select':
+      path += 'word_select.html';
+      res.statusCode = 200;
       break;
     default:
       path += '404.html';
