@@ -12,7 +12,7 @@ let path = './pages_for_web/';
   switch(req.url) {
     case '/': //first page 
       path += 'login.html';
-      res.statusCode = 200;
+      res.statusCode = 200; 
       break;
     case '/main_page':
       path += 'main_page.html';
@@ -35,6 +35,7 @@ let path = './pages_for_web/';
         }
         res.end(data);
       });
+      // reading in the html files that we already established and error-checks if the data isn't being read right
 });
 
 server.listen(3000, 'localhost', () =>{
