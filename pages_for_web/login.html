@@ -1,21 +1,104 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Node.js Crash Course</title>
+  <title>Login</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="login.css" rel="stylesheet" type="text/css">
 </head>
 <body>
+  <div class="container">
+    <div class="">
+      <header>
+        <nav>
+          <div class="nav-button">
+            <a href="/login">LOGIN</a> 
+          </div>
+          <div class="nav-button">
+            <a href = "/main_page">MAIN</a>
+          </div>
+          <div class="nav-button">
+            <a href = "/user_page">USER</a>
+          </div>
+          <div class="nav-button">
+            <a href = "/word_select">Word Select</a>
+          </div>
+        </nav>
+      </header>
 
-  <h1>About</h1>
-  <h2>Your path to a Node.js ninja! LOGIN </h2> 
-  <nav>
-    <a href="/login"> login</a>  
-    <!-- Note: might not need the above login code for the furture -->
-    <a href = "/main_page"> Main Page </a>
-    <a href = "/user_page"> User Page </a>
-    <a href = "/word_select"> Word Select </a>
-  </nav>
-  
+      <!-- WHAT TO DO:
+            Have the same setup as typic login pages:
+            - ONLY HAVE THE LOGIN FOR RETURNING USERS for now
+              - Login Heading "Hello, Welcome Back"
+                - //subheading: "Don't have an account yet? <a> Sign Up <a>"
+              - Email Address form input box
+              - Password form input box
+              - Remember me Checkbox
+              - LOGIN BUTTON
+              - // "---or login with---"
+                  - //Google & Facebook Buttons
+          -->
+          <!-- Note: might not need the above login code for the furture -->
+
+
+          <!--CREATE BUTTONS FOR THESE FOR NOW: -->
+
+      <main>
+        <!-- THE ACTUAL LOGIN SETUP-->
+        <div class="heading float">
+          <div class="heading-container">
+            <h1>Hello, Welcome Back</h1>
+            <h2>Don't have an account yet? 
+              <a href="">Sign Up</a>
+            </h2>
+          </div>
+          <div class="form-container">
+            <form action="" method="get" class="form-LOGIN">
+              <div class="form-LOGIN">
+                <label for="name">Email Address </label>
+                <br>
+                <input type="email" name="email" id="email" required>
+              </div>
+              <div class="form-LOGIN">
+                <label for="email">Password</label>
+                <br>
+                <input type="password" name="password" id="password" required>
+              </div>
+              <div class="form-LOGIN btn">
+                <!-- type="button" doesn't have no default behavior, 
+                  To make buttons do anything, y
+                  ou have to write JavaScript code to do the work.
+                therefore keep this as type-submit instead-->
+                <input type="submit" value="LOGIN">
+              </div>
+              <div class="form-remember">
+                <input type="checkbox" name="remember" id="remember">
+                <label for="remember">Remember Me</label>
+              </div>
+            </form>
+          </div>
+          <div class="sm-container">
+            <h3>or continue with</h3>
+            <a href="#" class="fb btn">
+              <i class="fa fa-facebook fa-fw"></i>
+              Facebook
+             </a>
+            <a href="#" class="twitter btn">
+              <i class="fa fa-twitter fa-fw"></i>
+              Twitter
+            </a>
+            <a href="#" class="google btn"><i class="fa fa-google fa-fw">
+              </i> 
+              Google+
+            </a>
+          </div>
+        </div>
+      </main>
+      <footer>
+      </footer>
+    </div>
+  </div>
 </body>
 </html>
