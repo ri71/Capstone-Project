@@ -3,7 +3,14 @@ const express = require ('express');
 //Express APP
 
 const app = express(); 
+/*
+const dbURI = "mongodb+srv://new_user_1:<password>@capstone.6vjyh.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
 
+
+mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
+  .then(result => app.listen(3000))
+  .catch(err => console.log(err));
+*/
 //Listening for the Requests 
 
 app.listen(3000); 
