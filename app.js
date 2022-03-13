@@ -1,19 +1,36 @@
 const express = require ('express');
+const Logins = require('./models/login');
 
 //Express APP
 
 const app = express(); 
-/*
-const dbURI = "mongodb+srv://new_user_1:<password>@capstone.6vjyh.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
+const mongoose = require("mongoose");
 
+
+const dbURI = "mongodb+srv://new_user_1:Mkhanom%4022@capstone.6vjyh.mongodb.net/Capstone-login?retryWrites=true&w=majority";
 
 mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(result => app.listen(3000))
   .catch(err => console.log(err));
-*/
+
 //Listening for the Requests 
 
-app.listen(3000); 
+app.get('/', (req, res) => {
+    const login = new Logins({
+      username: 'New_user',
+      password:'2468'
+    })
+
+    login.save()
+    .then(result => {
+      res.send(result);
+    })
+    .catch(err => {
+      console.log(err);
+    });
+});
+
+  
 
 
 app.get ('/login', (req, res) => 
